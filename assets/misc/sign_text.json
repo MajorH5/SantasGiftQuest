@@ -1,0 +1,28 @@
+{
+    "level1": {
+        "3-15": "Welcome to Santa's Gift Quest!\nUse WASD to move and jump.\nFollow the signs to learn how to play!",
+        "17-13": "Hold W while standing over a ladder to climb.",
+        "25-7": "Collect all the gifts within each level to progress!\nYou can see how many gift are remaining\nat the bottom of the screen.",
+        "45-5": "Nice work! You found a hidden christmas tree!\nTry and find them all for bonus points.",
+        "34-13": "DANGER:\nBEWARE OF PENGUINS!\nTip: Jump on a penguin to destroy it.",
+        "44-15": "Great job! You've completed the level\nStand on the sleigh after collecting all the presents\nto move on to the next level!"
+    },
+    "level2": {
+        "18-6": "CAUTION:\nSPIKES ARE DEADLY!",
+        "4-27": "Snowstorm Grotto"
+    },
+    "level3": {
+        "4-14": "Icy Tunnel"
+    },
+    "level4": {
+        "27-3": "Ho! Ho! Ho!",
+        "18-37": "Watch out!\nFalling means certain death!",
+        "3-10": "Chilly Cavern",
+        "44-32": "What do you get if you cross a snowman and a vampire?\nFrostbite!",
+        "12-28": "If you ask me, I don't think it's worth the risk."
+    },
+    "level5": {
+        "46-36": "Are your ankles okay after\nthat fall?!",
+        "5-44": "Frosty Outcove"
+    }
+}

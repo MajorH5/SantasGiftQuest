@@ -1,0 +1,22 @@
+canvas {
+    margin: auto;
+    display: block;
+    position: absolute;
+    border: 1px solid rgb(177, 177, 177);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
+    
+    /* max-width: 1080px;
+    max-height: 720px;
+    width: 100%;
+    height: auto; */
+
+}
+
+body {
+    overflow: hidden;
+    background-color: #030515;
+}
