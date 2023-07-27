@@ -1,0 +1,3 @@
+[submodule "lib/PhysicsJS2D"]
+	path = lib/PhysicsJS2D
+	url = https://github.com/MajorH5/PhysicsJS2D
