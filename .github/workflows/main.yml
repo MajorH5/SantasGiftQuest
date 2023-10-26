@@ -16,10 +16,14 @@ jobs:
       - name: Build HTML5 Game
         run: |
           # TODO: minify/bundle game assets
+          
+      - name: Fetch Submodules
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
-          submodules: true
