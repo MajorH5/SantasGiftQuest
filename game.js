@@ -1,6 +1,5 @@
 import { SantasGiftQuest } from "./lib/santasGiftQuest.js";
-
-const isDev = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+import { Constants } from "./lib/misc/constants.js";
 
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
@@ -23,7 +22,7 @@ function drawText (text, x = canvas.width / 2, y = canvas.height / 2) {
 }
 
 (async function () {
-    if (!isDev) {
+    if (!Constants.DEV_ENVIRONMENT) {
         canvas.width = SantasGiftQuest.DEFAULT_CANVAS_SIZE.x;
         canvas.height = SantasGiftQuest.DEFAULT_CANVAS_SIZE.y;
 
@@ -32,7 +31,7 @@ function drawText (text, x = canvas.width / 2, y = canvas.height / 2) {
     
     await game.init();
     
-    if (!isDev) {
+    if (!Constants.DEV_ENVIRONMENT) {
         drawText('Click to start the game.');
         await waitUserInteraction();
     }
