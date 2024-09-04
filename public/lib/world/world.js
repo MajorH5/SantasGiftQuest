@@ -413,7 +413,7 @@ export const World = (function () {
             this.worldSize = size;
 
             const backgroundLayers = this.parallaxManager.getLayers();
-            const canvasSize = game.constructor.DEFAULT_CANVAS_SIZE;
+            const canvasSize = Constants.DEFAULT_CANVAS_SIZE;
             const parallaxImageScale = this.parallaxManager.scale;
 
             for (let i = 0; i < backgroundLayers.length; i++) {

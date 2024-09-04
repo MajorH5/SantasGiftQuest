@@ -23,8 +23,8 @@ function drawText (text, x = canvas.width / 2, y = canvas.height / 2) {
 
 (async function () {
     if (!Constants.DEV_ENVIRONMENT) {
-        canvas.width = SantasGiftQuest.DEFAULT_CANVAS_SIZE.x;
-        canvas.height = SantasGiftQuest.DEFAULT_CANVAS_SIZE.y;
+        canvas.width = Constants.DEFAULT_CANVAS_SIZE.x;
+        canvas.height = Constants.DEFAULT_CANVAS_SIZE.y;
 
         drawText('Preloading content, please wait. This wont take long.');
     }

@@ -24,12 +24,6 @@ import { UIEditorScreen } from './ui/screens/uiEditorScreen.js';
 
 export const SantasGiftQuest = (function () {
     return class SantasGiftQuest {
-        
-        static CANVAS_SCALE = 1.2;
-        static DEFAULT_CANVAS_SIZE = new Vector2(900 * SantasGiftQuest.CANVAS_SCALE, 600 * SantasGiftQuest.CANVAS_SCALE);
-        static FRAME_RATE_CAP = 1000 / 80;
-        // static DEFAULT_CANVAS_SIZE = new Vector2(1920, 1080);
-
         static DEBUG_TOGGLE_KEY = 'q';
         static STAGE_RESET_KEY = 'r';
         static DEBUG_STAGE_CLEAR_KEY = 'c';
@@ -45,7 +39,7 @@ export const SantasGiftQuest = (function () {
             this.initialized = false;
             this.isRunning = false;
 
-            this.windowSize = SantasGiftQuest.DEFAULT_CANVAS_SIZE
+            this.windowSize = Constants.DEFAULT_CANVAS_SIZE
 
             this.mainWorld = null;
             this.player = new Player(canvasDom, true);
@@ -266,8 +260,8 @@ export const SantasGiftQuest = (function () {
             console.log('Preload complete.');
 
             // set canvas size
-            this.canvas.width = SantasGiftQuest.DEFAULT_CANVAS_SIZE.x;
-            this.canvas.height = SantasGiftQuest.DEFAULT_CANVAS_SIZE.y;
+            this.canvas.width = Constants.DEFAULT_CANVAS_SIZE.x;
+            this.canvas.height = Constants.DEFAULT_CANVAS_SIZE.y;
 
             // instantiate ui instances now that assets have been loaded
             this.titleScreen = this.createTitleScreen();
@@ -445,7 +439,7 @@ export const SantasGiftQuest = (function () {
             const now = Date.now();
             const deltaTime = now - this.lastFrame;
 
-            if (deltaTime > SantasGiftQuest.FRAME_RATE_CAP) {
+            if (deltaTime > Constants.FRAME_RATE_CAP) {
                 this.update(deltaTime);
                 this.render();
 

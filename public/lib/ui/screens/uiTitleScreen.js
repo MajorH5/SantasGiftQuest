@@ -119,7 +119,7 @@ export const UITitleScreen = (function () {
             
             this.creditsButton = new UIImage(Sprite.IMG_ICONS, {
                 size: new Vector2(16 * 4 + 8, 16).scale(3),
-                position: new Vector2(0, 16 * 3 + 16),
+                position: new Vector2(0, (16 * 3 + 16) * 2),
                 positionScale: new Vector2(0.5, 0),
                 pivot: new Vector2(0.5, 0),
                 imageRectSize: new Vector2(16 * 4 + 8, 16),
@@ -129,9 +129,9 @@ export const UITitleScreen = (function () {
 
             this.editorButton = new UIImage(Sprite.IMG_ICONS, {
                 size: new Vector2(16 * 3 + 14, 16).scale(3),
-                position: new Vector2(0, (16 * 3 + 16) * 2),
-                positionScale: new Vector2(0.5, 0),
                 pivot: new Vector2(0.5, 0),
+                position: new Vector2(0, 16 * 3 + 16),
+                positionScale: new Vector2(0.5, 0),
                 imageRectSize: new Vector2(16 * 3 + 14, 16),
                 imageRectOffset: new Vector2(0, 6 * 16),
                 clickable: true,
@@ -142,8 +142,8 @@ export const UITitleScreen = (function () {
             this.bindButtonEvents(this.editorButton);
             
             this.playButton.parentTo(this.buttonContainer);
-            this.creditsButton.parentTo(this.buttonContainer);
             this.editorButton.parentTo(this.buttonContainer);
+            this.creditsButton.parentTo(this.buttonContainer);
             
             this.versionText.parentTo(this);
             this.headerText.parentTo(this);
