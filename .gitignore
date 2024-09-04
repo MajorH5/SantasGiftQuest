@@ -1,8 +1,5 @@
 # from replit deployment
-/server.js
-/package.json
-/package-lock.json
 /.replit
 /.replit.nix
 /node_modules
-.vscode/settings.json
+.vscode/*

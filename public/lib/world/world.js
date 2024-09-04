@@ -18,8 +18,8 @@ import { Tile } from '../tiles/tile.js';
 import { Tween } from '../misc/tween.js';
 import { Camera } from './camera.js';
 import { Sprite } from '../sprites/sprite.js';
-import { ParallaxManager } from '../sprites/parrallaxManager.js';
-import { ParallaxLayer } from '../sprites/parrallaxLayer.js';
+import { ParallaxManager } from '../sprites/parallaxManager.js';
+import { ParallaxLayer } from '../sprites/parallaxLayer.js';
 
 export const World = (function () {
     return class World {
@@ -90,11 +90,12 @@ export const World = (function () {
             this.renderPosition = new Vector2(0, 0);
             this.renderRegion = new Vector2(canvas.width, canvas.height);
 
-            const layer1 = new ParallaxLayer(Sprite.IMG_WINTER_BACKGROUND_1, new Vector2(420, 300), new Vector2(0.1 / 5, 0.009));
+            // const layer1 = new ParallaxLayer(Sprite.IMG_WINTER_BACKGROUND_1, new Vector2(420, 300), new Vector2(0.1 / 5, 0.009));
             const layer2 = new ParallaxLayer(Sprite.IMG_WINTER_BACKGROUND_2, new Vector2(420, 300), new Vector2(0.05 / 5, 0.009));
+            // const layer2 = new ParallaxLayer(Sprite.IMG_SNOWYTILES, new Vector2(96, 156), new Vector2(0.05 / 5, 0.009));
 
             this.parallaxManager.addLayer(layer2);
-            this.parallaxManager.addLayer(layer1);
+            // this.parallaxManager.addLayer(layer1);
         }
 
         // sets the position from which the world
@@ -573,7 +574,7 @@ export const World = (function () {
             this.context.fillStyle = this.stageBackgroundColor;
             this.context.fillRect(0, 0, this.canvas.width + 1, this.canvas.height + 1);
 
-            this.parallaxManager.render(this.context, this.camera.getOffset(), this.scale);
+            this.parallaxManager.render(this.context, this.camera.getOffset(), this.scale, this.renderPosition, this.renderRegion);
 
             const renderOffset = this.camera.getOffset();
 

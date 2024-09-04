@@ -21,7 +21,8 @@ export const UIEditorScreen = (function () {
                 sizeScale: new Vector2(1, 1),
                 backgroundColor: "#48529D",
                 transparency: 1,
-                backgroundEnabled: true
+                backgroundEnabled: true,
+                visible: false
             });
 
             this.mapWindow = new UIBase({
@@ -37,7 +38,7 @@ export const UIEditorScreen = (function () {
                 // perhaps create a separate class for UI-based tilemap rendering
                 const screenPosition = this.mapWindow.getScreenPosition(screenSize);
 
-                this.tilemap.render(context, screenPosition.scale(2), (1 / Constants.TILE_SIZE) * this.mapScale)
+                this.tilemap.render(context, screenPosition.scale(1 / (1 / this.mapScale)), (1 / Constants.TILE_SIZE) * this.mapScale);
             })
 
             this.mapWindow.mouseMove.listen(this.onMapMouseMoved.bind(this));
