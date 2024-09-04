@@ -2,4 +2,4 @@
 /.replit
 /.replit.nix
 /node_modules
-.vscode/*
+.vscode/settings.json
