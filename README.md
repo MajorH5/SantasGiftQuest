@@ -1,6 +1,7 @@
 # Santa's Gift Quest
 
 A winter-themed HTML5 platformer.
+[Play here](https://majorh5.github.io/SantasGiftQuest/)
 
 ## How to Install and Run
 
